@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\petugasModel;
-use Illuminate\Http\Request;
+Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
-class PetugasController extends Controller
+class PetugasController extends Controller 
 {
     public function login(Request $request)
     {
@@ -26,7 +23,7 @@ class PetugasController extends Controller
         return response()->json(compact('token'));
     }
 
-    public function register(Request $request)
+    public function register(Request $request) 
     {
         $validator = Validator::make($request->all(), [
             'nama_petugas' => 'required|string|max:255',

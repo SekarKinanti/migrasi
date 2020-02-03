@@ -23,3 +23,17 @@ Route::get('/', function(){
   return Auth::user()->level;
 })->middleware('jwt.verify');
 Route::get('user', 'PetugasController@getAuthenticatedUser')->middleware('jwt.verify');
+
+// buku
+Route::get('/buku','Buku@index');
+Route::post('/simpan_buku','Buku@store');
+Route::put('/ubah_buku/{id}','Buku@update');
+Route::get('/tampil_buku','Buku@tampil');
+Route::delete('/hapus_buku/{id}','Buku@destroy');
+
+// anggota
+Route::get('/anggota','Anggota@index');
+Route::post('/simpan_anggota','Anggota@store');
+Route::put('/ubah_anggota/{id}','Anggota@update');
+Route::get('/tampil_anggota','Anggota@tampil');
+Route::delete('/hapus_anggota/{id}','Anggota@destroy');
