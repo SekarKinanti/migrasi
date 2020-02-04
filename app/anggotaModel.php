@@ -11,4 +11,8 @@ class anggotaModel extends Model
     protected $fillable=[
         "nama_anggota","alamat","telp"
     ];
+
+    public function pinjam(){
+        return $this->hasMany('App\Pinjam','id');
+      }
 }

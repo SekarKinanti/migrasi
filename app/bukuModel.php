@@ -11,4 +11,8 @@ class bukuModel extends Model
     protected $fillable=[
         "judul","penerbit","pengarang","foto"
     ];
+
+    public function detail(){
+        return $this->hasMany('App\Detail','id');
+      }
 }

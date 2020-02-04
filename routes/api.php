@@ -37,3 +37,12 @@ Route::post('/simpan_anggota','Anggota@store');
 Route::put('/ubah_anggota/{id}','Anggota@update');
 Route::get('/tampil_anggota','Anggota@tampil');
 Route::delete('/hapus_anggota/{id}','Anggota@destroy');
+
+Route::get('/peminjaman','peminjaman@index');
+Route::post('/tambah_pinjam','peminjaman@store');
+Route::put('/ubah_pinjam/{id}','peminjaman@update');
+Route::get('/tampil_pinjam','peminjaman@tampil');
+Route::delete('/hapus_pinjam/{id}','peminjaman@destroy');
+Route::post('/simpan_detail','peminjaman@simpan');
+Route::put('/ubah_detail/{id}','peminjaman@ubah');
+Route::delete('/hapus_detail/{id}','peminjaman@hapus');
